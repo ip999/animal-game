@@ -43,7 +43,7 @@ var msg = new SpeechSynthesisUtterance(
   utterances[randomUtterance] + critters[randomCritter].name
 );
 
-window.speechSynthesis.speak(msg);
+//window.speechSynthesis.speak(msg);
 
 //randomise the answers
 $(document).ready(function() {
@@ -51,11 +51,24 @@ $(document).ready(function() {
 });
 
 function fnCorrect() {
-  alert("That's Correct! Well Done.");
-  location.reload();
+  console.log('Correct');
+  //location.reload();
+  modal.style.display = 'block';
+  //location.reload();
 }
 
 function fnWrong() {
-  alert("Sorry That's not right, try again");
-  location.reload();
+  modalError.style.display = 'block';
+  //location.reload();
 }
+
+let modal = document.querySelector('.modal');
+let modalError = document.querySelector('.modalError');
+
+window.onclick = function(e) {
+  if (e.target == modal || e.target == modalError) {
+    modal.style.display = 'none';
+    modalError.style.display = 'none';
+    this.location.reload();
+  }
+};

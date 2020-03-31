@@ -50,16 +50,12 @@ $(document).ready(function() {
   $('.shuffle').shuffleChildren();
 });
 
-let clicked = false;
-
 function fnCorrect() {
   modal.style.display = 'block';
-  clicked = true;
 }
 
 function fnWrong() {
   modalError.style.display = 'block';
-  clicked = true;
 }
 
 let modal = document.querySelector('.modal');
@@ -73,16 +69,10 @@ window.onclick = function(e) {
   }
 };
 
-// $('#modalRed').on('touchstart click', function() {
-//   location.reload();
-// });
+$('#modalRed').on('touchstart click', function() {
+  location.reload();
+});
 
-// $('#modalGreen').on('touchstart click', function() {
-//   location.reload();
-// });
-
-$('#mainPage').on('touchstart click', function() {
-  if (clicked == true) {
-    //location.reload();
-  }
+$('#modalGreen').on('touchstart click', function() {
+  location.reload();
 });

@@ -45,6 +45,7 @@ var msg = new SpeechSynthesisUtterance(
 
 window.speechSynthesis.speak(msg);
 
+//randomise the answers
 $(document).ready(function() {
   $('.shuffle').shuffleChildren();
 });

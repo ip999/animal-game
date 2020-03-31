@@ -27,6 +27,7 @@ $.fn.shuffleChildren = function() {
   });
 };
 
+//randomise the answers
 $(document).ready(function() {
   $('.shuffle').shuffleChildren();
 });

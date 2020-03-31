@@ -50,16 +50,16 @@ $(document).ready(function() {
   $('.shuffle').shuffleChildren();
 });
 
+let clicked = false;
+
 function fnCorrect() {
-  console.log('Correct');
-  //location.reload();
   modal.style.display = 'block';
-  //location.reload();
+  clicked = true;
 }
 
 function fnWrong() {
   modalError.style.display = 'block';
-  //location.reload();
+  clicked = true;
 }
 
 let modal = document.querySelector('.modal');
@@ -73,6 +73,16 @@ window.onclick = function(e) {
   }
 };
 
-$('#modalRed').on('touchstart click', function() {
-  alert('click or touch');
+// $('#modalRed').on('touchstart click', function() {
+//   location.reload();
+// });
+
+// $('#modalGreen').on('touchstart click', function() {
+//   location.reload();
+// });
+
+$('#mainPage').on('touchstart click', function() {
+  if (clicked == true) {
+    //location.reload();
+  }
 });

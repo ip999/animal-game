@@ -1,0 +1,26 @@
+.container {
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+}
+div {
+  margin-top: 10px;
+}
+div.image {
+  font-size: 256px;
+  background-color: lightblue;
+}
+div.text {
+  font-size: 64px;
+}
+
+button {
+  font-size: 128px;
+  padding: 5px;
+  margin: 4px;
+}
+.center {
+  text-align: center;
+  border: 3px solid grey;
+  border-radius: 20px;
+}

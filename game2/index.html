@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base href="/" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -12,23 +11,21 @@
   </head>
   <body>
     <div class="container">
-      <div class="center image" id="animalIcon"></div>
       <div class="shuffle">
         <div
-          class="center text"
-          id="animalName"
+          class="center image"
+          id="animalIcon"
           type="button"
           onclick="fnCorrect()"
         ></div>
         <div
-          class="center text"
-          id="wrongAnswer"
+          class="center image"
+          id="wrongIcon"
           type="button"
           onclick="fnWrong()"
-        >
-          test
-        </div>
+        ></div>
       </div>
+      <div class="center text" id="animalName"></div>
     </div>
     <script src="/res/critters.js"></script>
     <script src="game.js"></script>

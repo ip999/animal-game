@@ -11,7 +11,7 @@ while (wrongAnswer == randomCritter) {
 
 document.getElementById('animalIcon').innerHTML = critters[randomCritter].icon;
 document.getElementById('animalName').innerHTML = critters[randomCritter].name;
-document.getElementById('wrongAnswer').innerHTML = critters[wrongAnswer].name;
+document.getElementById('wrongIcon').innerHTML = critters[wrongAnswer].icon;
 
 $.fn.shuffleChildren = function() {
   $.each(this.get(), function(index, el) {
@@ -26,6 +26,24 @@ $.fn.shuffleChildren = function() {
     $find.appendTo($el);
   });
 };
+
+utterances = [
+  'Can you see the   ',
+  'Which one is a   ',
+  'Can you point to the   ',
+  'Show me the   ',
+  'Can you see a  ',
+  'Is there a   ',
+  'Can you show me the   '
+];
+
+randomUtterance = Math.floor(Math.random() * utterances.length);
+
+var msg = new SpeechSynthesisUtterance(
+  utterances[randomUtterance] + critters[randomCritter].name
+);
+
+window.speechSynthesis.speak(msg);
 
 $(document).ready(function() {
   $('.shuffle').shuffleChildren();

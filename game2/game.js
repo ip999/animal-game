@@ -73,10 +73,6 @@ window.onclick = function(e) {
   }
 };
 
-window.ontouchend = function(e) {
-  if (e.target == modal || e.target == modalError) {
-    modal.style.display = 'none';
-    modalError.style.display = 'none';
-    this.location.reload();
-  }
-};
+$('#modalRed').on('touchstart click', function() {
+  alert('click or touch');
+});

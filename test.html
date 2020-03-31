@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.min.css"
+    />
+    <style>
+      .container {
+        padding: 10px;
+        margin: 10px;
+        align-items: center;
+      }
+      div {
+        margin-top: 10px;
+      }
+      div.image {
+        font-size: 256px;
+        background-color: lightblue;
+      }
+      div.text {
+        font-size: 64px;
+      }
+
+      button {
+        font-size: 128px;
+        padding: 5px;
+        margin: 4px;
+      }
+      .center {
+        text-align: center;
+        border: 3px solid grey;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center image" id="animalIcon"></div>
+      <div class="shuffle">
+        <div
+          class="center text"
+          id="animalName"
+          type="button"
+          onclick="fnCorrect()"
+        ></div>
+        <div
+          class="center text"
+          id="wrongAnswer"
+          type="button"
+          onclick="fnWrong()"
+        >
+          test
+        </div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

@@ -130,22 +130,12 @@ $.fn.shuffleChildren = function() {
   });
 };
 
-// $('#shuffle').click(function() {
-//   // Usage
-//   $('.shuffle').shuffleChildren();
-// });
-
 $(document).ready(function() {
   $('.shuffle').shuffleChildren();
 });
 
-$('#animalName').click(function() {
-  // Usage
-  console.log("That's Correct! Well Done.");
-});
-
 function fnCorrect() {
-  alert('correct!');
+  alert("That's Correct! Well Done.");
   location.reload();
 }
 

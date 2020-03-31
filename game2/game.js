@@ -72,3 +72,11 @@ window.onclick = function(e) {
     this.location.reload();
   }
 };
+
+window.ontouchend = function(e) {
+  if (e.target == modal || e.target == modalError) {
+    modal.style.display = 'none';
+    modalError.style.display = 'none';
+    this.location.reload();
+  }
+};

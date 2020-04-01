@@ -1,10 +1,6 @@
-//implement gameloop instead of reload..
-
 function mainLoop() {
   var randomCritter = Math.floor(Math.random() * critters.length);
   console.log('randomCritter: ' + randomCritter);
-  // console.log(critters[randomCritter].icon);
-  // console.log(critters[randomCritter].name);
 
   var wrongAnswer = randomCritter;
   while (wrongAnswer == randomCritter) {
@@ -48,6 +44,7 @@ function mainLoop() {
     utterances[randomUtterance] + critters[randomCritter].name
   );
 
+  // too creepy
   //window.speechSynthesis.speak(msg);
 
   //randomise the answers
@@ -69,22 +66,29 @@ function fnWrong() {
 let modal = document.querySelector('.modal');
 let modalError = document.querySelector('.modalError');
 
-window.onclick = function(e) {
-  if (e.target == modal || e.target == modalError) {
-    modal.style.display = 'none';
-    modalError.style.display = 'none';
-    //this.location.reload();
-    this.mainLoop();
-  }
-};
+// window.onclick = function(e) {
+//   if (e.target == modal || e.target == modalError) {
+//     console.log(e);
+//     modal.style.display = 'none';
+//     modalError.style.display = 'none';
+//     //this.location.reload();
+//     this.mainLoop();
+//   }
+// };
 
-$('#modalRed').on('touchstart click', function() {
-  modal.style.display = 'none';
-  modalError.style.display = 'none';
-  mainLoop();
-});
+// $('#modalRed').on('touchstart click', function() {
+//   modal.style.display = 'none';
+//   modalError.style.display = 'none';
+//   mainLoop();
+// });
 
-$('#modalGreen').on('touchstart click', function() {
+// $('#modalGreen').on('touchstart click', function() {
+//   modal.style.display = 'none';
+//   modalError.style.display = 'none';
+//   mainLoop();
+// });
+
+$('.modal,.modalError').on('touchstart click', function() {
   modal.style.display = 'none';
   modalError.style.display = 'none';
   mainLoop();

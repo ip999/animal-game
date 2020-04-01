@@ -92,6 +92,7 @@ div.text {
   to {top:0; opacity:1}
 }
 
+/* fix for mobile */
 @media only screen 
 and (max-width: 812px) 
 and (-webkit-min-device-pixel-ratio: 3) { 

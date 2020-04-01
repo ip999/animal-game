@@ -92,7 +92,9 @@ div.text {
   to {top:0; opacity:1}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen 
+and (max-width: 600px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
   div.image {
     font-size: 128px;
   }
